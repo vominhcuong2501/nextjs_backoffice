@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>404 Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="404 Not Found" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-color: #fff;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .page-not-found {
+            height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 16px;
+            position: relative;
+        }
+
+        .page-not-found .content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-not-found h1 {
+            color: #0A4245;
+            text-align: center;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .page-not-found p {
+            color: #343A40;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 300;
+            margin-top: 8px;
+        }
+
+        .page-not-found p span {
+            display: block;
+        }
+
+        .page-not-found img {
+            max-width: 1139px;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .page-not-found a {
+            display: block;
+            padding: 15px 0;
+            border-radius: 8px;
+            background: #0A4245;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 500;
+            text-decoration: none;
+            margin: 30px auto 0;
+            border: 1px solid #0A4245;
+            transition: all 0.3s ease-in-out;
+            max-width: 211px;
+            width: 100%;
+        }
+
+        .page-not-found a:hover {
+            background: #fff;
+            color: #0A4245;
+        }
+
+        @media (max-width: 991.98px) {
+            .page-not-found h1 {
+                font-size: 28px;
+            }
+
+            .page-not-found p {
+                font-size: 16px;
+                margin-top: 4px;
+            }
+
+            .page-not-found p span {
+                display: inline;
+            }
+
+            .page-not-found a {
+                padding: 10.5px 0;
+                border-radius: 4px;
+                font-size: 18px;
+                margin: 16px auto 0;
+                max-width: 174px;
+            }
+        }
+
+        @media (max-width: 399.98px) {
+            .page-not-found img {
+                min-width: 420px;
+                min-height: 170px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-not-found">
+        <img src="https://d3gqwaovyokz23.cloudfront.net/uploads/img-404.png" alt="Oops! Page Not Found!"
+            title="Oops! Page Not Found!" width="615" height="370" loading="lazy">
+        <div class="content">
+            <h1>Page Not Found</h1>
+            <p>We apologize, but the page you're looking for <span>doesn't exist or may have been moved.</span></p>
+            <a href="/" title="Back to Home" target="_self">Back to Home</a>
+        </div>
+    </main>
+</body>
+
+</html>

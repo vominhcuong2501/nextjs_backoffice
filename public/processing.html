@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Loading</title>
+    <style>
+        *,
+        *:after,
+        *:before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: arial;
+            font-size: 16px;
+            margin: 0;
+            background: white;
+            color: #000;
+        }
+
+        .preloader-wrap {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preloader {
+            width: 50px;
+            padding: 8px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: #C91F26;
+            --_m:
+                conic-gradient(#0000 10%, #000),
+                linear-gradient(#000 0 0) content-box;
+            -webkit-mask: var(--_m);
+            mask: var(--_m);
+            -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+            animation: s3 1s infinite linear;
+        }
+
+        @keyframes s3 {
+            to {
+                transform: rotate(1turn)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader-wrap">
+        <div class="preloader">
+        </div>
+    </div>
+</body>
+
+<script>
+    // Handle Amex Redirect From API (THIS LAYOUT IS CHILD IN IFRAME 3D AMEX) 
+    const currentUrl = new URL(parent.location.href);
+    const params = new URLSearchParams(currentUrl.search);
+
+    // Get Params
+    const urlIFrameParams = new URLSearchParams(window.location.search);
+    const status = urlIFrameParams.get('status');
+    const step = urlIFrameParams.get('step');
+
+    if (!status) {
+        parent.location.href = 'notfound.html';
+    } else {
+        // Update Params
+        step && params.set('step', step);
+        params.set('status', status);
+
+        currentUrl.search = params.toString();
+        parent.location.href = currentUrl.toString();
+    }
+
+</script>
+
+</html>

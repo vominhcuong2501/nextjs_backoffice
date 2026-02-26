@@ -1,0 +1,103 @@
+{
+    "version": "0.1.0",
+    "private": true,
+    "name": "ntbipcom",
+    "description": "Next.js boilerplate with husky, lint-staged, eslint + prettier",
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@9.1.1",
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "server": "node server.js",
+        "prettier:format": "prettier --write .",
+        "prettier:check": "prettier --check \"**/*.{ts,tsx,json}\"",
+        "lint": "next lint",
+        "eslint:format": "eslint src --fix",
+        "postinstall": "husky",
+        "commit": "cz",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "@hookform/resolvers": "^3.9.1",
+        "@next/third-parties": "^15.2.4",
+        "@react-google-maps/api": "^2.20.3",
+        "@tailwindcss/line-clamp": "^0.4.4",
+        "@tailwindcss/postcss": "^4",
+        "@tanstack/react-query": "^5.61.5",
+        "autoprefixer": "^10.4.20",
+        "axios": "^1.7.8",
+        "class-variance-authority": "^0.7.1",
+        "clean-css": "^5.3.3",
+        "clsx": "^2.1.1",
+        "cookies-next": "^5.0.2",
+        "crypto-js": "^4.2.0",
+        "dotenv": "^17.2.2",
+        "gsap": "^3.13.0",
+        "html-react-parser": "^5.1.18",
+        "intl-tel-input": "^18.2.1",
+        "motion": "^12.6.3",
+        "next": "15.2.4",
+        "nextjs-toploader": "^3.9.17",
+        "nprogress": "^0.2.0",
+        "react": "19.0.0",
+        "react-dom": "19.0.0",
+        "react-hook-form": "^7.53.2",
+        "react-paginate": "^8.2.0",
+        "react-select": "^5.8.3",
+        "react-toastify": "^11.0.5",
+        "swiper": "^11.1.15",
+        "tailwind-merge": "^3.5.0",
+        "tailwindcss": "^3.4.1",
+        "yup": "^1.4.0",
+        "zustand": "^5.0.1"
+    },
+    "devDependencies": {
+        "@commitlint/config-conventional": "^19.6.0",
+        "@eslint/eslintrc": "^3",
+        "@tanstack/react-query-devtools": "^5.61.5",
+        "@tanstack/react-query-next-experimental": "^5.61.5",
+        "@types/clean-css": "^4.2.11",
+        "@types/crypto-js": "^4.2.2",
+        "@types/intl-tel-input": "^18.1.4",
+        "@types/node": "^20",
+        "@types/nprogress": "^0.2.3",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "@typescript-eslint/eslint-plugin": "^8.16.0",
+        "commitizen": "^4.3.1",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^9",
+        "eslint-config-next": "15.0.3",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-unused-imports": "^4.4.1",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.2.10",
+        "postcss": "^8",
+        "prettier": "^3.4.1",
+        "prettier-plugin-tailwindcss": "^0.6.9",
+        "typescript": "^5"
+    },
+    "lint-staged": {
+        "src/**/*": [
+            "pnpm prettier:format",
+            "pnpm eslint:format"
+        ]
+    },
+    "pnpm": {
+        "overrides": {
+            "@types/react": "npm:types-react@19.0.0-rc.1",
+            "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+        }
+    },
+    "engines": {
+        "node": ">=18.18.2"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}

@@ -1,0 +1,52 @@
+#!/bin/bash
+# Purpose: Deploy backup server first, then live server, with PM2 start/restart management.
+
+# Load environment variables from .env file
+source .env
+
+echo "Starting deployment..."
+
+pm2_ecosystem="ecosystem.config.js"
+pm2_name="$NEXT_PUBLIC_APP_NAME"_"$NEXT_PUBLIC_APP_PORT"
+
+function start_or_restart() {
+  local name=$1
+  local namespace=$2
+
+  if pm2 describe "$namespace" > /dev/null; then
+    echo "Process $namespace exists. Restarting..."
+    pm2 restart "$name"
+  else
+    echo "Process $name does not exist. Starting new process..."
+    mkdir -p logs
+    pm2 start "$name"
+  fi
+}
+
+echo "Deploying live server..."
+
+echo "Pulling latest code..."
+if ! git pull; then
+  echo "Git pull failed for live server! Aborting deploy."
+  exit 1
+fi
+
+rm -rf .next
+
+echo "Installing dependencies..."
+if ! pnpm install ; then
+  echo "pnpm install failed for live server! Aborting deploy."
+  exit 1
+fi
+
+echo "Building project..."
+if ! pnpm build; then
+  echo "Build failed for live server! Aborting deploy."
+  exit 1
+fi
+
+start_or_restart "$pm2_ecosystem" "$pm2_name"
+
+echo "Deployment completed successfully!"
+pm2 save
+exit 0

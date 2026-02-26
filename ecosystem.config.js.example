@@ -1,0 +1,20 @@
+require('dotenv').config()
+
+module.exports = {
+    apps: [
+        {
+            name: `${process.env.NEXT_PUBLIC_APP_NAME}_${process.env.NEXT_PUBLIC_APP_PORT}`,
+            script: 'node_modules/next/dist/bin/next',
+            args: `start -H 0.0.0.0 -p ${process.env.NEXT_PUBLIC_APP_PORT}`,
+            exec_mode: 'cluster',
+            instances: 4,
+            watch: false,
+            autorestart: true,
+            max_memory_restart: '1G',
+            cwd: './',
+            out_file: './logs/live.out.log',
+            error_file: './logs/live.error.log',
+            merge_logs: true
+        }
+    ]
+}
