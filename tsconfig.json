@@ -21,7 +21,17 @@
             }
         ],
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./src/*"],
+            "@ui": ["./src/app/(admin)/ui"],
+            "@ui/*": ["./src/app/(admin)/ui/*"],
+            "@libs": ["./src/app/(admin)/libs"],
+            "@libs/*": ["./src/app/(admin)/libs/*"],
+            "@icon": ["./src/app/(admin)/icon"],
+            "@icon/*": ["./src/app/(admin)/icon/*"],
+            "@components": ["./src/app/(admin)/_components"],
+            "@components/*": ["./src/app/(admin)/_components/*"],
+            "@constants": ["./src/app/(admin)/constants"],
+            "@constants/*": ["./src/app/(admin)/constants/*"]
         }
     },
     "files": ["src/types/index.d.ts"],
