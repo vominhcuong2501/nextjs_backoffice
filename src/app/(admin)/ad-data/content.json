@@ -1,0 +1,18 @@
+{
+    "t": {
+        "txt_login_title": "Đăng nhập",
+        "txt_login_description": "Nhập thông tin để truy cập Back Office",
+        "txt_login_email_label": "Email",
+        "txt_login_email_placeholder": "Email",
+        "txt_login_password_label": "Mật khẩu",
+        "txt_login_password_placeholder": "Mật khẩu",
+        "txt_login_submit": "Đăng nhập",
+        "txt_login_submit_loading": "Đang đăng nhập...",
+        "txt_form_we_need_your_pass": "Vui lòng nhập mật khẩu",
+        "txt_form_field_invalid": "Trường không hợp lệ",
+        "txt_form_please_enter_full_name": "Vui lòng nhập họ tên",
+        "txt_form_enter_email": "Vui lòng nhập email",
+        "txt_form_email_invalid": "Email không hợp lệ",
+        "txt_form_format_full_name": "Họ tên không đúng định dạng"
+    }
+}

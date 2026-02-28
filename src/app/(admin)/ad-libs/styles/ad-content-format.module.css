@@ -1,0 +1,153 @@
+.ad-content-format h3,
+.ad-content-format h4,
+.ad-content-format h5,
+.ad-content-format h6,
+.ad-content-format h1 {
+    margin-top: 12px;
+    line-height: 1.3;
+}
+
+.ad-content-format h2 {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--primary);
+    line-height: 1.3;
+    margin-top: 32px;
+}
+
+.ad-content-format h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--black-1);
+    line-height: 1.3;
+    margin-top: 16px;
+}
+
+.ad-content-format h4,
+.ad-content-format h5,
+.ad-content-format h6 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ad-content-format p {
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.ad-content-format p:first-of-type {
+    margin-top: 0;
+}
+
+.ad-content-format li {
+    font-size: 20px;
+    margin-top: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.ad-content-format ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.ad-content-format ol {
+    list-style: decimal;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.root :global(.content-format .list-circle) {
+    list-style: circle;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.ad-content-format a {
+    color: #028c47;
+    text-decoration: underline;
+    line-height: 1.4;
+}
+
+.ad-content-format a:hover {
+    text-decoration: underline;
+}
+
+.root :global(.content-format .table-responsive) {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.ad-content-format table {
+    width: 100%;
+}
+
+.ad-content-format table,
+.ad-content-format td,
+.ad-content-format th {
+    border: 1px solid #aaa;
+    padding: 8px;
+}
+
+.ad-content-format table p {
+    margin: 0;
+}
+
+.ad-content-format img {
+    border-radius: 8px;
+    margin: 20px auto;
+}
+
+.ad-content-format strong {
+    font-weight: 500;
+}
+
+.root :global(.career-detail-content.content-format) ul li::marker {
+    color: #028c47;
+}
+
+.root :global(.career-detail-content.content-format) ul,
+.root :global(.career-detail-content.content-format) ol {
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 991.98px) {
+    .ad-content-format h2 {
+        font-size: 18px;
+    }
+    .ad-content-format h3 {
+        font-size: 16px;
+        margin-top: 12px;
+    }
+    .ad-content-format h3 + p {
+        margin-top: 8px;
+    }
+    .root :global(.content-format .table-responsive) {
+        margin-top: 30px;
+    }
+    .ad-content-format ul,
+    .ad-content-format ol {
+        padding-left: 10px;
+    }
+    .ad-content-format p,
+    .ad-content-format li {
+        font-size: 16px;
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .root :global(.content-format .table-responsive) {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    .root :global(::-webkit-scrollbar) {
+        height: 4px;
+    }
+    .ad-content-format img {
+        margin: 12px auto;
+    }
+}

@@ -1,0 +1,220 @@
+/* Dropdown option styles - remove borders and radius */
+.dropdown-no-style {
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.dropdown-no-style option {
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: white !important;
+    padding: 8px 16px !important;
+}
+
+.dropdown-no-style:focus {
+    border: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.dropdown-no-style:focus option {
+    border: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Remove dropdown list container borders and radius */
+.dropdown-no-style:focus-within,
+.dropdown-no-style[aria-expanded="true"] {
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Target the dropdown list container specifically */
+select.dropdown-no-style {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove all possible browser default styling */
+select.dropdown-no-style::-webkit-scrollbar {
+    display: none;
+}
+
+select.dropdown-no-style::-moz-focus-inner {
+    border: 0 !important;
+    outline: none !important;
+}
+
+/* Target dropdown when opened on different browsers */
+select.dropdown-no-style:active,
+select.dropdown-no-style:hover,
+select.dropdown-no-style:focus-visible {
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Force remove any inherited styling */
+.dropdown-no-style * {
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* label required  */
+.label-required::after {
+    content: '*';
+    position: absolute;
+    color: var(--red-1);
+}
+
+.input-white.label-required::after {
+    color: #FFFFFF;
+}
+
+/* end label required  */
+
+/* skeleton loading  */
+@-webkit-keyframes skeletonLoading {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes skeletonLoading {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.skeleton-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-box::before {
+    background-color: #e2e8f0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.skeleton-box::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0,
+            rgba(255, 255, 255, 0.2) 20%,
+            rgba(255, 255, 255, 0.5) 60%,
+            rgba(255, 255, 255, 0));
+    -webkit-animation: skeletonLoading 2s infinite;
+    animation: skeletonLoading 2s infinite;
+}
+
+/* end skeleton loading  */
+
+/* clip path polygon custom  */
+.clip-path-polygon-custom {
+    clip-path: polygon(0% 0%, 90% 0%, 100% 20%, 100% 100%, 0% 100%);
+}
+
+@media (max-width: 600px) {
+    .clip-path-polygon-custom {
+        clip-path: polygon(0% 0%, 78% 0%, 100% 25%, 100% 100%, 0% 100%) !important;
+    }
+}
+
+/* end clip path polygon custom  */
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+
+/* scrollbar green  */
+.scrollbar-green::-webkit-scrollbar-track {
+    background-color: #DEE2E6;
+    border-radius: 20px;
+}
+
+.scrollbar-green::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.scrollbar-green::-webkit-scrollbar-thumb {
+    background-color: #028C47;
+    border-radius: 20px;
+}
+
+/* end scrollbar green  */
+
+
+/* scrollbar gray  */
+.scrollbar::-webkit-scrollbar-track {
+    background-color: '#FFFFFF';
+    border-radius: 20px;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 2px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #CED4DA;
+    border-radius: 20px;
+}
+
+/* end scrollbar gray  */
+
+/* no scrollbar  */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+/* end no scrollbar  */

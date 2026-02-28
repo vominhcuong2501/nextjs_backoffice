@@ -1,0 +1,173 @@
+/* Style override cho intl-tel-input – class .iti__* do thư viện render nên dùng :global. Cần class .root trên wrapper. */
+.root :global(.iti__dropdown-content)::-webkit-scrollbar {
+    width: 4px !important;
+    border-radius: 4px !important;
+}
+
+.root :global(.iti__dropdown-content)::-webkit-scrollbar-track {
+    background: #f6f8f9 !important;
+    border-radius: 4px !important;
+}
+
+.root :global(.iti__dropdown-content)::-webkit-scrollbar-thumb {
+    background: #e1e1e1 !important;
+    border-radius: 4px !important;
+}
+
+.root :global(.iti__selected-country) {
+    padding: 12px 29px 12px 12px;
+    position: relative;
+}
+
+.root :global(.iti__selected-country-primary) {
+    padding: 0;
+}
+
+.root :global(.iti--allow-dropdown .iti__country-container:not(:has(+ input[disabled])):not(:has(+ input[readonly])) .iti__selected-country-primary:hover),
+.root :global(.iti--allow-dropdown .iti__country-container:not(:has(+ input[disabled])):not(:has(+ input[readonly])) .iti__selected-country:has(+ .iti__dropdown-content:hover) .iti__selected-country-primary) {
+    background-color: unset !important;
+}
+
+.root :global(.iti__selected-flag:focus-visible) {
+    border: none;
+    outline: none;
+}
+
+.root :global(.iti--separate-dial-code .iti__selected-flag) {
+    background-color: transparent;
+    padding: 12px 29px 12px 12px;
+}
+
+.root :global(.iti--separate-dial-code .iti__selected-flag::before) {
+    position: absolute;
+    content: '';
+    top: 12px;
+    bottom: 12px;
+    right: 0;
+    width: 1px;
+    background-color: #e1e1e1;
+}
+
+.root :global(div[aria-expanded='true'].iti__selected-flag .iti__arrow) {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.root :global(.iti__arrow) {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-image: url('https://d21l9vkgwnizti.cloudfront.net/test_uploads/icon-arrow-down-1727684252.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    z-index: -1;
+    transition: all 0.2s;
+    margin: 0;
+}
+
+.root :global(.iti__selected-dial-code) {
+    color: #646464;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+.root :global(.iti__dropdown-content) {
+    padding: 12px;
+    margin: 2px 0 0;
+    border: none;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    max-height: 290px !important;
+    left: 0;
+}
+
+.root :global(.iti__divider),
+.root :global(.iti__preferred) {
+    display: none;
+}
+
+.root :global(.iti--inline-dropdown .iti__country-list) {
+    padding: 0 12px 16px !important;
+}
+
+.root :global(.iti__country-list .iti__country) {
+    padding: 12px;
+    border: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+}
+
+.root :global(.iti__country-list .iti__country:hover) {
+    background: #f2f9f9;
+}
+
+.root :global(.iti__flag) {
+    transform: scale(1);
+}
+
+.root :global(.iti__country-name) {
+    color: #333;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    transition: all 0.2s;
+    margin-left: 4px;
+}
+
+.root :global(.iti__country-list .iti__country:hover .iti__country-name) {
+    color: #008291;
+    font-weight: 300;
+}
+
+.root :global(.iti__dial-code) {
+    color: #999;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    transition: all 0.2s;
+}
+
+.root :global(.iti__country-list .iti__country:hover .iti__dial-code) {
+    color: #008291;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 767.98px) {
+    .root :global(.iti--fullscreen-popup.iti--container) {
+        padding: 0;
+        justify-content: flex-end !important;
+    }
+
+    .root :global(.iti--fullscreen-popup .iti__dropdown-content) {
+        max-height: 452px !important;
+        padding: 32px 16px 16px 16px;
+        border-radius: 16px 16px 0 0;
+        min-width: 375px;
+    }
+
+    .root :global(.iti--fullscreen-popup .iti__dropdown-content::after) {
+        position: absolute;
+        content: ' ';
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 16px;
+        background: #c4c4c4;
+        width: 40px;
+        height: 4px;
+    }
+
+    .root :global(.iti__selected-dial-code),
+    .root :global(.iti__country-name),
+    .root :global(.iti__dial-code) {
+        font-size: 16px;
+    }
+
+    .root :global(.iti__country-list .iti__country) {
+        padding: 10px 12px !important;
+    }
+}

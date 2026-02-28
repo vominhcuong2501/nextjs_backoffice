@@ -1,8 +1,6 @@
 import type { Viewport } from 'next'
 import { type ReactNode } from 'react'
 import './globals.css'
-import '@libs/styles/button.css'
-import '@libs/styles/content-format.css'
 
 export const viewport: Viewport = {
     width: 'device-width',
@@ -11,9 +9,5 @@ export const viewport: Viewport = {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-    return (
-        <html lang='en'>
-            <body>{children}</body>
-        </html>
-    )
+    return <>{children}</>
 }

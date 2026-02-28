@@ -1,0 +1,41 @@
+.AdButtonEffect {
+    overflow: hidden;
+}
+
+.AdButtonEffect::before,
+.AdButtonEffect::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.AdButtonEffect::after {
+    z-index: -1;
+}
+
+.AdButtonEffect::before {
+    z-index: -2;
+}
+
+.AdButtonMimas::after {
+    content: '';
+    width: 130%;
+    left: -15%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.AdButtonMimas:hover::after {
+    transform: translate3d(100%, 0, 0);
+}
+
+.AdButtonPan::after {
+    content: '';
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.AdButtonPan:hover::after {
+    transform: translate3d(0, -100%, 0);
+}
