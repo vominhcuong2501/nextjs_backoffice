@@ -8,10 +8,10 @@ export const loginSchema = (t?: CustomTypeConfig<string>) => {
         password: yup
             .string()
             .trim()
-            .required(t?.txt_we_need_your_pass)
-            .min(6, t?.txt_field_invalid)
-            .max(20, t?.txt_field_invalid)
-            .matches(/^[^\sáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ]+$/, t?.txt_field_invalid)
+            .required(t?.txt_form_we_need_your_pass)
+            .min(6, t?.txt_form_field_invalid)
+            .max(20, t?.txt_form_field_invalid)
+            .matches(/^[^\sáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ]+$/, t?.txt_form_field_invalid)
     })
 
     return schema

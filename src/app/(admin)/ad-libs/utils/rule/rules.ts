@@ -14,12 +14,12 @@ export const fullNameValidate = (t?: CustomTypeConfig<string>) => {
 export const emailValidate = (t?: CustomTypeConfig<string>) => {
     return yup
         .string()
-        .required(t?.txt_enter_email)
-        .email(t?.txt_email_invalid)
+        .required(t?.txt_form_enter_email)
+        .email(t?.txt_form_email_invalid)
         .test({
             name: 'email',
             exclusive: false,
-            message: t?.txt_email_invalid,
+            message: t?.txt_form_email_invalid,
             test: (value) => {
                 if (!value) return false
 
