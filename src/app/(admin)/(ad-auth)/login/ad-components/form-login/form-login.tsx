@@ -52,7 +52,7 @@ export const FormLogin = () => {
                         disabled={isSubmitting}
                         isLoading={isSubmitting}
                     >
-                        {isSubmitting ? t.txt_login_submit_loading : t.txt_login_submit}
+                        {t.txt_login_submit}
                     </AdButton>
                 </form>
             </div>

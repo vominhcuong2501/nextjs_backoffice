@@ -1,3 +1,1 @@
-export * from './ad-generate'
-
 export * from './ad-page-keyword'
